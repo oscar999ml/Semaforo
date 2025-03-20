@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    <link rel="stylesheet" href="styles.css" /> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <div id="map-container">
+        <div id="map" style="height: 500px;"></div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Opciones</button>
+        <div class="dropdown-content">
+            <button id="add-semaforo">Añadir Semáforo</button>
+            <button id="remove-semaforo">Eliminar Semáforo</button>
+            <input type="text" id="coordinates-input" placeholder="Lat, Lng" />
+            <button id="add-semaforo-coordinates">Añadir Semáforo por Coordenadas</button>
+            <button id="open-simulation">Simulación</button>
+            <button id="draw-path">Trazar Camino</button> <!-- Botón para trazar camino -->
+        </div>
+    </div>
+    <div id="message-box"></div> <!-- Contenedor para los mensajes -->
+    <div id="vehicle-data" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;">
+        <h3>Datos del Vehículo</h3>
+        <p id="vehicle-info">Esperando datos...</p>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <script src="opensttreet.js"></script>
+    <script src="estadocemaforo.js"></script>
+    <script src="posicionvehiculo.js"></script>
+    <script src="enviarDatosMicrocontrolador.js"></script> <!-- Incluir el nuevo archivo -->
+
+</body>
+</html>
